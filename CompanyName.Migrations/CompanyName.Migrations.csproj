@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>$(DefaultTargetFramework)</TargetFramework>
+		<RuntimeIdentifier>win10-x64</RuntimeIdentifier>
+		<ApplicationIcon />
+		<OutputType>Exe</OutputType>
+		<AssemblyName>mig</AssemblyName>
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+		<AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+		<OutputPath>bin\Debug\</OutputPath>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+		<OutputPath>bin\Release\</OutputPath>
+	</PropertyGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\CompanyName.Business\CompanyName.Business.csproj" />
+		<ProjectReference Include="..\CompanyName.Infrastructure.Persistence.EF\CompanyName.Infrastructure.Persistence.EF.csproj" />
+		<ProjectReference Include="..\CompanyName.Infrastructure\CompanyName.Infrastructure.csproj" />
+		<ProjectReference Include="..\CompanyName.QuoteParameters\CompanyName.QuoteParameters.csproj" />
+		<ProjectReference Include="..\CompanyName.Web\CompanyName.Web.csproj" />
+		<ProjectReference Include="..\BuildingBlocks\CompanyName.BuildingBlocks.MassTransitBusIntegration\CompanyName.BuildingBlocks.MassTransitBusIntegration.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Reference Include="Microsoft.VisualBasic" />
+	</ItemGroup>
+</Project>
